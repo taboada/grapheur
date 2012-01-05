@@ -15,7 +15,7 @@ $(document).ready(function() {
   // un petit paquet de valeurs aléatoires
   var nombreValeurs = 5;
   var valuesX = makeArray(nombreValeurs);
-  var valuesY = makeRandIntArray(nombreValeurs,20,80); //nombre, min, max
+  var valuesY = makeRandIntArray(nombreValeurs,0,100); //nombre, min, max
   $("#expr").text('valeurs de y : ' + valuesY);
   // largeur et hauteur de la boite
   var largeur = 500;
@@ -37,11 +37,11 @@ $(document).ready(function() {
     "nostroke"  : false,
     "axis"      : "0 0 1 1"
   }
-  graph.linechart(0,0,largeur,hauteur,valuesX,valuesY,options);
+  graph.linechart(10,10,largeur,hauteur,valuesX,valuesY,options);
 
   graphbox.fadeIn("slow");
   $("#expr").delay(1000).fadeIn("slow");
-  $("#msg").delay(1500).fadeIn("slow");
+  $("#msg").delay(2500).fadeIn("slow");
 });
 
 
