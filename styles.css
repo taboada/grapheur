@@ -1,0 +1,21 @@
+@import url(reset.css);
+
+#wrap{
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+h1{
+  margin: 10px;
+  font-family: verdana;
+  font-weight: normal;
+  font-size: 24px;
+}
+#expr, #graph{
+  padding: 10px;
+  margin: 10px;
+}
+#graph{
+  height: 300px;
+  background-color: rgba(0,0,0,.2);
+}
