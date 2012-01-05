@@ -1,12 +1,22 @@
 // scripts pour gerer le grapheur
 
+function makeArray(nombreValeurs){
+  var myArray = [];
+  for(i=0; i<nombreValeurs ; i++){
+    myArray.push(i);
+  }
+  return myArray;
+}
+
 $(document).ready(function() {
 
  // $("#expr").hide();
 
   // un petit paquet de valeurs aléatoires
-  var values = makeRandIntArray(10,20,80); //nombre, min, max
-  $("#expr").text('valeurs de y : ' + values);
+  var nombreValeurs = 5;
+  var valuesX = makeArray(nombreValeurs);
+  var valuesY = makeRandIntArray(nombreValeurs,20,80); //nombre, min, max
+  $("#expr").text('valeurs de y : ' + valuesY);
   // largeur et hauteur de la boite
   var largeur = 500;
   var hauteur = 400;
@@ -27,7 +37,7 @@ $(document).ready(function() {
     "nostroke"  : false,
     "axis"      : "0 0 1 1"
   }
-  graph.linechart(0,0,largeur,hauteur,[0,10,20,30,40,50,60,70,80,90],values,options);
+  graph.linechart(0,0,largeur,hauteur,valuesX,valuesY,options);
 
   graphbox.fadeIn("slow");
   $("#expr").delay(1000).fadeIn("slow");
