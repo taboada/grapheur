@@ -17,5 +17,20 @@ h1{
 }
 #graph{
   height: 300px;
-  background-color: rgba(0,0,0,.2);
+  //display: none;
+  background-color: rgba(0,0,0,.1);
+}
+#expr,#graph,#msg{
+  display: none;
+}
+
+#msg{
+  font-family: verdana;
+  font-style: italic;
+  font-size: 11px;
+  color: gray;
+}
+
+#expr{
+  font-family: courier;
 }
